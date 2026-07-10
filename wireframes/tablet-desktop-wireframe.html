@@ -1,0 +1,292 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>TindaJuan Tablet and Desktop Wireframe</title>
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      background: #f3f4f6;
+      color: #1f2937;
+      padding: 28px;
+    }
+    .page { max-width: 1540px; margin: 0 auto; }
+    .hero { display: flex; justify-content: space-between; align-items: flex-end; gap: 20px; margin-bottom: 24px; }
+    h1 { color: #14532d; font-size: 30px; letter-spacing: -.04em; }
+    .subtitle { color: #6b7280; margin-top: 6px; }
+    .pill { border: 1px solid #d1d5db; background: #fff; padding: 7px 11px; border-radius: 999px; color: #4b5563; font-size: 12px; }
+    .legend { display:flex; gap:10px; flex-wrap:wrap; }
+    .section-title { margin: 32px 0 14px; color:#14532d; font-size: 22px; letter-spacing: -.03em; }
+    .grid { display: grid; gap: 24px; }
+    .two { grid-template-columns: 1fr 1fr; }
+    .mock-title { font-weight: 900; color:#14532d; display:flex; justify-content:space-between; align-items:baseline; margin-bottom: 10px; }
+    .mock-title span { color:#6b7280; font-size: 12px; }
+    .tablet {
+      width: 760px;
+      height: 540px;
+      border: 12px solid #111827;
+      border-radius: 28px;
+      background: #fffdf7;
+      overflow: hidden;
+      box-shadow: 0 22px 60px rgba(17,24,39,.18);
+    }
+    .desktop {
+      width: 100%;
+      height: 720px;
+      border: 10px solid #111827;
+      border-radius: 24px;
+      background: #fffdf7;
+      overflow: hidden;
+      box-shadow: 0 22px 60px rgba(17,24,39,.18);
+    }
+    .topbar { height: 58px; background:#fff; border-bottom:1px solid #e5e7eb; display:flex; align-items:center; justify-content:space-between; padding: 0 18px; }
+    .brand { display:flex; align-items:center; gap:10px; color:#14532d; font-weight:900; }
+    .logo { width:32px; height:32px; border-radius:10px; background:linear-gradient(135deg,#22c55e,#15803d); color:white; display:grid; place-items:center; font-size:11px; font-weight:900; }
+    .status { color:#6b7280; font-size:12px; display:flex; gap:10px; align-items:center; }
+    .badge { padding:4px 8px; border-radius:999px; background:#dcfce7; color:#15803d; font-size:11px; font-weight:900; }
+    .badge.orange { background:#ffedd5; color:#c2410c; }
+    .badge.red { background:#fee2e2; color:#b91c1c; }
+    .btn { height:38px; border:none; border-radius:13px; background:#16a34a; color:white; padding:0 14px; font-weight:900; }
+    .btn.orange { background:#f97316; }
+    .btn.ghost { background:#f9fafb; color:#374151; border:1px solid #d1d5db; }
+    .search { height:42px; border:1px dashed #9ca3af; border-radius:14px; background:white; display:flex; align-items:center; padding:0 12px; color:#6b7280; font-size:13px; }
+    .card { background:white; border:1px solid #e5e7eb; border-radius:18px; padding:14px; }
+    .metric .label { font-size:11px; color:#6b7280; font-weight:800; }
+    .metric .value { font-size:24px; color:#14532d; font-weight:950; letter-spacing:-.04em; margin-top:5px; }
+    .metric.warn .value { color:#f97316; }
+    .metric.red .value { color:#dc2626; }
+    .tabs { display:flex; gap:8px; }
+    .tab { height:34px; min-width:72px; border-radius:12px; border:1px solid #e5e7eb; background:#fff; display:grid; place-items:center; font-size:12px; color:#6b7280; font-weight:800; }
+    .tab.active { background:#16a34a; color:white; border-color:#16a34a; }
+    .row { background:white; border:1px solid #e5e7eb; border-radius:15px; padding:12px; display:flex; justify-content:space-between; align-items:center; gap:12px; }
+    .row h4 { font-size:14px; margin-bottom:3px; }
+    .muted { color:#6b7280; font-size:12px; }
+    .price { color:#14532d; font-weight:950; }
+    .note { background:white; border-left:4px solid #16a34a; border-radius:12px; padding:12px 14px; color:#4b5563; font-size:13px; line-height:1.5; margin-top: 10px; }
+
+    /* tablet cashier */
+    .tablet-shell { height: calc(100% - 58px); display:grid; grid-template-columns: 1.15fr .85fr; }
+    .tablet-products { padding:16px; border-right:1px solid #e5e7eb; overflow:hidden; }
+    .tablet-cart { padding:16px; background:#ffffff; display:flex; flex-direction:column; gap:12px; }
+    .product-grid { display:grid; grid-template-columns: repeat(2, 1fr); gap:10px; margin-top:12px; }
+    .product-card { background:#fff; border:1px solid #e5e7eb; border-radius:16px; padding:13px; min-height:86px; display:flex; flex-direction:column; justify-content:space-between; }
+    .cart-items { display:grid; gap:8px; flex:1; }
+    .total-box { background:#14532d; color:white; border-radius:18px; padding:16px; }
+    .total-box .value { font-size:34px; font-weight:950; letter-spacing:-.05em; }
+    .pay-actions { display:grid; grid-template-columns:repeat(3,1fr); gap:8px; }
+
+    /* desktop */
+    .desktop-shell { height: calc(100% - 58px); display:grid; grid-template-columns: 220px 1fr; }
+    .sidebar { background:white; border-right:1px solid #e5e7eb; padding:14px; display:flex; flex-direction:column; gap:8px; }
+    .nav { height:42px; border-radius:14px; display:flex; align-items:center; gap:10px; padding:0 12px; font-weight:800; color:#4b5563; }
+    .nav.active { background:#dcfce7; color:#15803d; }
+    .workspace { padding:18px; overflow:hidden; }
+    .dash-grid { display:grid; grid-template-columns: repeat(4, 1fr); gap:12px; margin: 14px 0; }
+    .desktop-main { display:grid; grid-template-columns: 1.2fr .8fr; gap:14px; height: calc(100% - 120px); }
+    .table { display:grid; gap:8px; }
+    .table-head { display:grid; grid-template-columns: 1.5fr .8fr .8fr .8fr; color:#6b7280; font-size:12px; font-weight:900; padding:0 12px; }
+    .table-row { display:grid; grid-template-columns: 1.5fr .8fr .8fr .8fr; align-items:center; background:white; border:1px solid #e5e7eb; border-radius:14px; padding:12px; font-size:14px; }
+    .report-layout { display:grid; grid-template-columns: 1fr 360px; gap:14px; height: calc(100% - 72px); }
+    .chart-placeholder { height:210px; border:1px dashed #9ca3af; border-radius:18px; background:linear-gradient(180deg,#fff,#f9fafb); display:grid; place-items:center; color:#6b7280; font-weight:900; margin-top:12px; }
+    .split-note { display:grid; grid-template-columns: 760px 1fr; gap:16px; align-items:start; }
+    @media (max-width: 1200px) {
+      .two { grid-template-columns: 1fr; }
+      .split-note { grid-template-columns: 1fr; }
+      .tablet { width: 100%; }
+    }
+  </style>
+</head>
+<body>
+  <main class="page">
+    <section class="hero">
+      <div>
+        <h1>TindaJuan Tablet + Desktop Wireframe</h1>
+        <p class="subtitle">Responsive layouts for tablet cashier mode and desktop owner/admin mode.</p>
+      </div>
+      <div class="legend">
+        <span class="pill">Tablet = cashier split screen</span>
+        <span class="pill">Desktop = reports/admin workspace</span>
+        <span class="pill">Same data, different layout</span>
+      </div>
+    </section>
+
+    <h2 class="section-title">Tablet Wireframes</h2>
+    <section class="grid two">
+      <div>
+        <div class="mock-title">01 Tablet Cashier Checkout <span>best for counter</span></div>
+        <div class="tablet">
+          <div class="topbar">
+            <div class="brand"><div class="logo">TJ</div>Benta</div>
+            <div class="status"><span class="badge">Offline OK</span><span>Aling Nena Store</span></div>
+          </div>
+          <div class="tablet-shell">
+            <div class="tablet-products">
+              <div style="display:flex;gap:10px;align-items:center;">
+                <div class="search" style="flex:1;">🔎 Search paninda...</div>
+                <button class="btn ghost">Scan later</button>
+              </div>
+              <div class="tabs" style="margin-top:12px;"><div class="tab active">All</div><div class="tab">Drinks</div><div class="tab">Tingi</div><div class="tab">Low Stock</div></div>
+              <div class="product-grid">
+                <div class="product-card"><div><h4>Milo Sachet</h4><p class="muted">24 sachet</p></div><div class="price">₱10</div></div>
+                <div class="product-card"><div><h4>Coke 1.5L</h4><p class="muted">6 bottle</p></div><div class="price">₱75</div></div>
+                <div class="product-card"><div><h4>Egg</h4><p class="muted">30 pcs</p></div><div class="price">₱9</div></div>
+                <div class="product-card"><div><h4>Lucky Me Chicken</h4><p class="muted">4 pcs</p></div><span class="badge orange">Low</span></div>
+                <div class="product-card"><div><h4>Surf Sachet</h4><p class="muted">18 sachet</p></div><div class="price">₱8</div></div>
+                <div class="product-card"><div><h4>Rice 1kg</h4><p class="muted">25 kilo</p></div><div class="price">₱55</div></div>
+              </div>
+            </div>
+            <div class="tablet-cart">
+              <div class="mock-title" style="margin:0;">Cart <span>3 items</span></div>
+              <div class="cart-items">
+                <div class="row"><div><h4>Milo Sachet</h4><p class="muted">2 × ₱10</p></div><b>₱20</b></div>
+                <div class="row"><div><h4>Coke 1.5L</h4><p class="muted">1 × ₱75</p></div><b>₱75</b></div>
+                <div class="row"><div><h4>Egg</h4><p class="muted">3 × ₱9</p></div><b>₱27</b></div>
+              </div>
+              <div class="total-box"><div class="muted" style="color:#bbf7d0;">Total</div><div class="value">₱122</div></div>
+              <div class="pay-actions"><button class="btn">Pay Now</button><button class="btn orange">Kulang</button><button class="btn ghost">Full Utang</button></div>
+            </div>
+          </div>
+        </div>
+        <div class="note">Tablet layout should be split-screen: left side products, right side cart/payment. Payment should support Cash, GCash, Maya, mixed, and Kulang.</div>
+      </div>
+
+      <div>
+        <div class="mock-title">02 Tablet Services Mode <span>GCash/Maya fast actions</span></div>
+        <div class="tablet">
+          <div class="topbar">
+            <div class="brand"><div class="logo">TJ</div>Services</div>
+            <div class="status"><span class="badge">Wallets tracked</span><span>Today fee: ₱240</span></div>
+          </div>
+          <div class="tablet-shell" style="grid-template-columns:.9fr 1.1fr;">
+            <div class="tablet-products">
+              <div class="card metric"><div class="label">GCash Balance</div><div class="value">₱8,500</div></div>
+              <div class="card metric" style="margin-top:10px;"><div class="label">Maya Balance</div><div class="value">₱3,200</div></div>
+              <div style="display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:12px;">
+                <button class="btn" style="height:72px;">GCash<br>Cash-In</button>
+                <button class="btn orange" style="height:72px;">GCash<br>Cash-Out</button>
+                <button class="btn" style="height:72px;">Maya<br>Cash-In</button>
+                <button class="btn orange" style="height:72px;">Maya<br>Cash-Out</button>
+              </div>
+            </div>
+            <div class="tablet-cart">
+              <div class="mock-title" style="margin:0;">GCash Cash-In <span>preview effects</span></div>
+              <div class="search">Amount: ₱500</div>
+              <div class="search">Service Fee: ₱10</div>
+              <div class="search">Reference No.: optional</div>
+              <div class="row"><span>Kaha</span><span class="badge">+₱510</span></div>
+              <div class="row"><span>GCash Wallet</span><span class="badge red">-₱500</span></div>
+              <div class="row"><span>Service Income</span><span class="badge">+₱10</span></div>
+              <button class="btn" style="height:48px;">Save Transaction</button>
+              <p class="muted">Fee lang ang income. Transaction amount is service volume.</p>
+            </div>
+          </div>
+        </div>
+        <div class="note">Services on tablet should show wallet balances + quick service buttons, then a transaction form with clear cash/wallet effects.</div>
+      </div>
+    </section>
+
+    <h2 class="section-title">Desktop Wireframes</h2>
+    <section class="grid">
+      <div>
+        <div class="mock-title">03 Desktop Dashboard / Reports <span>owner/admin view</span></div>
+        <div class="desktop">
+          <div class="topbar">
+            <div class="brand"><div class="logo">TJ</div>TindaJuan</div>
+            <div class="status"><span class="badge">All local</span><span>Today · Aling Nena Store</span><button class="btn ghost">Export later</button></div>
+          </div>
+          <div class="desktop-shell">
+            <aside class="sidebar">
+              <div class="nav active">▦ Dashboard</div>
+              <div class="nav">▣ Benta</div>
+              <div class="nav">◇ Services</div>
+              <div class="nav">□ Paninda</div>
+              <div class="nav">◎ Suki / Utang</div>
+              <div class="nav">≡ Kaha</div>
+              <div class="nav">↧ Reports</div>
+              <div style="flex:1"></div>
+              <div class="nav">⚙ Settings</div>
+            </aside>
+            <section class="workspace">
+              <div style="display:flex;justify-content:space-between;align-items:center;">
+                <div><h2 style="color:#14532d;letter-spacing:-.04em;">Daily Overview</h2><p class="muted">Separate benta, service volume, fee income, and kaha.</p></div>
+                <div class="tabs"><div class="tab active">Today</div><div class="tab">This Week</div><div class="tab">Custom</div></div>
+              </div>
+              <div class="dash-grid">
+                <div class="card metric"><div class="label">Product Sales</div><div class="value">₱4,200</div></div>
+                <div class="card metric"><div class="label">Est. Profit</div><div class="value">₱850</div></div>
+                <div class="card metric warn"><div class="label">Service Fees</div><div class="value">₱240</div></div>
+                <div class="card metric"><div class="label">Expected Kaha</div><div class="value">₱1,850</div></div>
+              </div>
+              <div class="report-layout">
+                <div class="card">
+                  <div class="mock-title" style="margin:0 0 10px;">Daily Cash + Sales Flow <span>placeholder chart</span></div>
+                  <div class="chart-placeholder">Chart: Cash In / Cash Out / Sales / Services</div>
+                  <div class="table" style="margin-top:12px;">
+                    <div class="table-head"><span>Metric</span><span>Amount</span><span>Type</span><span>Status</span></div>
+                    <div class="table-row"><b>Cash Sales</b><span>₱3,400</span><span>Benta</span><span class="badge">OK</span></div>
+                    <div class="table-row"><b>Utang Sales</b><span>₱800</span><span>Credit</span><span class="badge orange">Collect</span></div>
+                    <div class="table-row"><b>Service Volume</b><span>₱12,000</span><span>Not sales</span><span class="badge">Tracked</span></div>
+                    <div class="table-row"><b>Cash Out</b><span>₱2,550</span><span>Kaha</span><span class="badge red">Review</span></div>
+                  </div>
+                </div>
+                <div style="display:grid;gap:12px;align-content:start;">
+                  <div class="card metric"><div class="label">Total Utang</div><div class="value" style="color:#dc2626;">₱4,500</div></div>
+                  <div class="card metric"><div class="label">GCash Balance</div><div class="value">₱8,500</div></div>
+                  <div class="card metric"><div class="label">Maya Balance</div><div class="value">₱3,200</div></div>
+                  <div class="card"><h4 style="margin-bottom:8px;">Low Stock</h4><div class="row"><span>Lucky Me Chicken</span><span class="badge orange">4 left</span></div></div>
+                </div>
+              </div>
+            </section>
+          </div>
+        </div>
+        <div class="note">Desktop should be owner/admin focused: reports, table scanning, inventory review, export/backup, and daily reconciliation.</div>
+      </div>
+
+      <div>
+        <div class="mock-title">04 Desktop Product + Inventory Management <span>bulk/admin view</span></div>
+        <div class="desktop" style="height:620px;">
+          <div class="topbar">
+            <div class="brand"><div class="logo">TJ</div>Paninda</div>
+            <div class="status"><button class="btn">Add Product</button><button class="btn ghost">Stock Adjustment</button></div>
+          </div>
+          <div class="desktop-shell">
+            <aside class="sidebar">
+              <div class="nav">▦ Dashboard</div>
+              <div class="nav">▣ Benta</div>
+              <div class="nav">◇ Services</div>
+              <div class="nav active">□ Paninda</div>
+              <div class="nav">◎ Suki / Utang</div>
+              <div class="nav">≡ Kaha</div>
+              <div class="nav">↧ Reports</div>
+            </aside>
+            <section class="workspace">
+              <div style="display:grid;grid-template-columns:1fr auto;gap:12px;align-items:center;">
+                <div class="search">🔎 Search product, category, unit...</div>
+                <div class="tabs"><div class="tab active">All</div><div class="tab">Low Stock</div><div class="tab">Archived</div></div>
+              </div>
+              <div class="dash-grid" style="grid-template-columns:repeat(3,1fr);">
+                <div class="card metric"><div class="label">Products</div><div class="value">24</div></div>
+                <div class="card metric warn"><div class="label">Low Stock</div><div class="value">6</div></div>
+                <div class="card metric"><div class="label">Inventory Value</div><div class="value">₱18,450</div></div>
+              </div>
+              <div class="card">
+                <div class="table">
+                  <div class="table-head"><span>Product</span><span>Price</span><span>Stock</span><span>Status</span></div>
+                  <div class="table-row"><b>Milo Sachet</b><span>₱10 / ₱8 cost</span><span>24 sachet</span><span class="badge">OK</span></div>
+                  <div class="table-row"><b>Lucky Me Chicken</b><span>₱15 / ₱12 cost</span><span>4 pcs</span><span class="badge orange">Low</span></div>
+                  <div class="table-row"><b>Coke 1.5L</b><span>₱75 / ₱65 cost</span><span>6 bottle</span><span class="badge">OK</span></div>
+                  <div class="table-row"><b>Egg</b><span>₱9 / ₱7 cost</span><span>30 pcs</span><span class="badge">OK</span></div>
+                  <div class="table-row"><b>Surf Sachet</b><span>₱8 / ₱6 cost</span><span>18 sachet</span><span class="badge">OK</span></div>
+                </div>
+              </div>
+            </section>
+          </div>
+        </div>
+        <div class="note">Desktop product view can use tables because screen space is bigger. Phone/tablet should stay card-based.</div>
+      </div>
+    </section>
+  </main>
+</body>
+</html>

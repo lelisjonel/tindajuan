@@ -1,0 +1,58 @@
+<svg width="1200" height="360" viewBox="0 0 1200 360" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title desc">
+  <title id="title">TindaJuan Logo</title>
+  <desc id="desc">A friendly storefront icon with TJ monogram and TindaJuan wordmark.</desc>
+  <defs>
+    <linearGradient id="greenGradient" x1="36" y1="36" x2="292" y2="292" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#22C55E"/>
+      <stop offset="1" stop-color="#15803D"/>
+    </linearGradient>
+    <filter id="softShadow" x="0" y="0" width="340" height="340" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+      <feFlood flood-opacity="0" result="BackgroundImageFix"/>
+      <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+      <feOffset dy="12"/>
+      <feGaussianBlur stdDeviation="14"/>
+      <feComposite in2="hardAlpha" operator="out"/>
+      <feColorMatrix type="matrix" values="0 0 0 0 0.082 0 0 0 0 0.325 0 0 0 0 0.176 0 0 0 0.22 0"/>
+      <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow"/>
+      <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow" result="shape"/>
+    </filter>
+  </defs>
+
+  <!-- Icon -->
+  <g filter="url(#softShadow)">
+    <rect x="36" y="36" width="288" height="288" rx="72" fill="url(#greenGradient)"/>
+
+    <!-- Store awning base -->
+    <path d="M91 130C91 122.268 97.268 116 105 116H255C262.732 116 269 122.268 269 130V153H91V130Z" fill="#FFFDF7"/>
+
+    <!-- Awning stripes -->
+    <path d="M91 153H127V170C127 179.941 118.941 188 109 188C99.0589 188 91 179.941 91 170V153Z" fill="#FACC15"/>
+    <path d="M127 153H163V170C163 179.941 154.941 188 145 188C135.059 188 127 179.941 127 170V153Z" fill="#F97316"/>
+    <path d="M163 153H199V170C199 179.941 190.941 188 181 188C171.059 188 163 179.941 163 170V153Z" fill="#FACC15"/>
+    <path d="M199 153H235V170C235 179.941 226.941 188 217 188C207.059 188 199 179.941 199 170V153Z" fill="#F97316"/>
+    <path d="M235 153H269V170C269 179.941 260.941 188 251 188C242.163 188 235 180.837 235 172V153Z" fill="#FACC15"/>
+
+    <!-- Store body -->
+    <path d="M108 186H252V259C252 266.732 245.732 273 238 273H122C114.268 273 108 266.732 108 259V186Z" fill="#FFFDF7"/>
+
+    <!-- Door / J shape -->
+    <path d="M188 204H222V273H188V204Z" fill="#14532D" fill-opacity="0.92"/>
+    <path d="M188 238C188 257.33 172.33 273 153 273H138V245H153C156.866 245 160 241.866 160 238V204H188V238Z" fill="#14532D" fill-opacity="0.92"/>
+
+    <!-- T shape -->
+    <path d="M131 204H184V228H169V273H143V228H131V204Z" fill="#16A34A"/>
+
+    <!-- Counter line -->
+    <path d="M125 259H235" stroke="#F97316" stroke-width="10" stroke-linecap="round"/>
+
+    <!-- Check mark -->
+    <path d="M219 223L233 237L260 209" stroke="#16A34A" stroke-width="14" stroke-linecap="round" stroke-linejoin="round"/>
+  </g>
+
+  <!-- Wordmark -->
+  <g>
+    <text x="374" y="174" font-family="Plus Jakarta Sans, Nunito Sans, Inter, Arial, sans-serif" font-size="92" font-weight="800" letter-spacing="-3" fill="#14532D">Tinda</text>
+    <text x="608" y="174" font-family="Plus Jakarta Sans, Nunito Sans, Inter, Arial, sans-serif" font-size="92" font-weight="800" letter-spacing="-3" fill="#F97316">Juan</text>
+    <text x="380" y="232" font-family="Plus Jakarta Sans, Nunito Sans, Inter, Arial, sans-serif" font-size="32" font-weight="600" fill="#6B7280">Simple POS para sa tindahang Pinoy</text>
+  </g>
+</svg>
