@@ -7,12 +7,13 @@ export default function KahaPage() {
       <PageHeader
         eyebrow="Cash Drawer"
         title="Kaha"
-        description="Placeholder for starting cash, personal kuha, cash-in, cash-out, and expected kaha."
-      actionLabel="Record Movement"
+        description="Track starting cash, manual cash-in, manual cash-out, and expected drawer balance."
+        actionLabel="Record Movement"
       />
       <EmptyState
-        title="Kaha module ready for build"
-        description="Phase 1 creates the route and shell first. The local database and real forms will be added in the next implementation phases."
+        title="Wala pang galaw sa kaha."
+        description="Phase 2 polishes the shell and reusable UI first. Real data and forms will come after the local database foundation."
+        helper="Nababawas ito sa kaha, pero hindi ito binabawas sa kita ng tindahan."
       />
     </div>
   );

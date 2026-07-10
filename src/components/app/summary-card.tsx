@@ -1,6 +1,8 @@
+import type { ReactNode } from "react";
+
 type SummaryCardProps = {
   label: string;
-  value: string;
+  value: ReactNode;
   helper: string;
   accent?: "green" | "orange" | "yellow";
 };
@@ -13,9 +15,9 @@ const accentClasses = {
 
 export function SummaryCard({ label, value, helper, accent = "green" }: SummaryCardProps) {
   return (
-    <article className={`rounded-3xl border p-4 shadow-sm ${accentClasses[accent]}`}>
+    <article className={`rounded-[var(--radius-card)] border p-4 shadow-sm ${accentClasses[accent]}`}>
       <p className="text-xs font-semibold uppercase tracking-wide opacity-75">{label}</p>
-      <p className="mt-2 text-2xl font-bold">{value}</p>
+      <p className="mt-2 text-2xl font-black">{value}</p>
       <p className="mt-1 text-xs leading-5 opacity-80">{helper}</p>
     </article>
   );

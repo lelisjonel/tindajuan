@@ -7,12 +7,13 @@ export default function SettingsPage() {
       <PageHeader
         eyebrow="Store Setup"
         title="Settings"
-        description="Placeholder for local store profile, preferences, and future backup/export controls."
-      actionLabel="Save Store"
+        description="Set store profile, preferences, and future backup/export options."
+        actionLabel="Save Store"
       />
       <EmptyState
-        title="Settings module ready for build"
-        description="Phase 1 creates the route and shell first. The local database and real forms will be added in the next implementation phases."
+        title="Wala pang store profile."
+        description="Phase 2 polishes the shell and reusable UI first. Real data and forms will come after the local database foundation."
+        helper="Local-first muna tayo before cloud accounts and sync."
       />
     </div>
   );

@@ -7,12 +7,13 @@ export default function PanindaPage() {
       <PageHeader
         eyebrow="Products + Stocks"
         title="Paninda"
-        description="Placeholder for product CRUD, stock counts, low stock alerts, and adjustments."
-      actionLabel="Add Product"
+        description="Manage product list, price, cost, units, stock quantity, and low-stock alerts."
+        actionLabel="Add Product"
       />
       <EmptyState
-        title="Paninda module ready for build"
-        description="Phase 1 creates the route and shell first. The local database and real forms will be added in the next implementation phases."
+        title="Wala pang paninda."
+        description="Phase 2 polishes the shell and reusable UI first. Real data and forms will come after the local database foundation."
+        helper="Mag-add muna ng product para makapagbenta."
       />
     </div>
   );

@@ -1,16 +1,34 @@
 @import "tailwindcss";
 
 :root {
-  --background: #fffdf7;
-  --foreground: #1f2937;
-  --surface: #ffffff;
-  --muted: #6b7280;
-  --border: #e5e7eb;
-  --primary: #16a34a;
-  --primary-dark: #14532d;
-  --accent: #f97316;
-  --warning: #facc15;
-  --danger: #dc2626;
+  --color-primary-green: #16a34a;
+  --color-dark-green: #14532d;
+  --color-warm-orange: #f97316;
+  --color-soft-yellow: #facc15;
+  --color-background: #fffdf7;
+  --color-surface: #ffffff;
+  --color-text-dark: #1f2937;
+  --color-text-muted: #6b7280;
+  --color-border: #e5e7eb;
+  --color-danger: #dc2626;
+  --color-success: #16a34a;
+  --color-warning: #f59e0b;
+  --color-info: #2563eb;
+  --radius-card: 1.5rem;
+  --radius-control: 1rem;
+  --touch-target: 44px;
+  --bottom-nav-height: 72px;
+
+  --background: var(--color-background);
+  --foreground: var(--color-text-dark);
+  --surface: var(--color-surface);
+  --muted: var(--color-text-muted);
+  --border: var(--color-border);
+  --primary: var(--color-primary-green);
+  --primary-dark: var(--color-dark-green);
+  --accent: var(--color-warm-orange);
+  --warning: var(--color-soft-yellow);
+  --danger: var(--color-danger);
 }
 
 @theme inline {
@@ -33,9 +51,10 @@ body {
   min-height: 100%;
   background:
     radial-gradient(circle at top left, rgba(250, 204, 21, 0.22), transparent 28rem),
+    radial-gradient(circle at top right, rgba(22, 163, 74, 0.12), transparent 24rem),
     var(--background);
   color: var(--foreground);
-  font-family: var(--font-geist-sans), Inter, system-ui, sans-serif;
+  font-family: var(--font-geist-sans), "Plus Jakarta Sans", Inter, system-ui, sans-serif;
 }
 
 a {
@@ -48,4 +67,42 @@ input,
 select,
 textarea {
   font: inherit;
+}
+
+.tj-card {
+  border: 1px solid var(--border);
+  border-radius: var(--radius-card);
+  background: rgba(255, 255, 255, 0.92);
+  box-shadow: 0 16px 40px rgba(20, 83, 45, 0.08);
+}
+
+.tj-input {
+  min-height: 48px;
+  width: 100%;
+  border-radius: var(--radius-control);
+  border: 1px solid var(--border);
+  background: white;
+  padding: 0 1rem;
+  color: var(--foreground);
+  outline: none;
+}
+
+.tj-input:focus {
+  border-color: var(--primary);
+  box-shadow: 0 0 0 4px rgba(22, 163, 74, 0.14);
+}
+
+.tj-touch-target {
+  min-height: var(--touch-target);
+  min-width: var(--touch-target);
+}
+
+.safe-bottom-padding {
+  padding-bottom: calc(var(--bottom-nav-height) + env(safe-area-inset-bottom));
+}
+
+@media (min-width: 1024px) {
+  .safe-bottom-padding {
+    padding-bottom: 2.5rem;
+  }
 }

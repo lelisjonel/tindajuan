@@ -1,3 +1,5 @@
+import { PrimaryButton } from "./primary-button";
+
 type PageHeaderProps = {
   eyebrow?: string;
   title: string;
@@ -7,18 +9,15 @@ type PageHeaderProps = {
 
 export function PageHeader({ eyebrow, title, description, actionLabel }: PageHeaderProps) {
   return (
-    <header className="mb-5 rounded-3xl border border-green-100 bg-white p-5 shadow-sm">
+    <header className="tj-card mb-5 overflow-hidden p-5 sm:p-6">
+      <div className="absolute hidden" aria-hidden="true" />
       {eyebrow ? <p className="mb-2 text-xs font-bold uppercase tracking-[0.18em] text-[var(--primary)]">{eyebrow}</p> : null}
       <div className="flex flex-col gap-4 sm:flex-row sm:items-start sm:justify-between">
         <div>
-          <h1 className="text-2xl font-bold text-[var(--primary-dark)]">{title}</h1>
+          <h1 className="text-2xl font-black tracking-tight text-[var(--primary-dark)] sm:text-3xl">{title}</h1>
           <p className="mt-2 max-w-2xl text-sm leading-6 text-[var(--muted)]">{description}</p>
         </div>
-        {actionLabel ? (
-          <button className="min-h-12 rounded-2xl bg-[var(--primary)] px-4 text-sm font-bold text-white shadow-sm transition hover:bg-[var(--primary-dark)]">
-            {actionLabel}
-          </button>
-        ) : null}
+        {actionLabel ? <PrimaryButton>{actionLabel}</PrimaryButton> : null}
       </div>
     </header>
   );

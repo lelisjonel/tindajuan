@@ -7,12 +7,13 @@ export default function ServicesPage() {
       <PageHeader
         eyebrow="GCash / Maya"
         title="Services"
-        description="Placeholder for cash-in, cash-out, service fees, and wallet balance tracking."
-      actionLabel="Record Service"
+        description="Record cash-in, cash-out, wallet movement, and service fee income."
+        actionLabel="Record Service"
       />
       <EmptyState
-        title="Services module ready for build"
-        description="Phase 1 creates the route and shell first. The local database and real forms will be added in the next implementation phases."
+        title="Wala pang GCash/Maya transaction today."
+        description="Phase 2 polishes the shell and reusable UI first. Real data and forms will come after the local database foundation."
+        helper="Service fee lang ang income. Hindi product sales ang full cash-in/cash-out amount."
       />
     </div>
   );

@@ -1,20 +1,20 @@
+import { PrimaryButton } from "./primary-button";
+
 type EmptyStateProps = {
   title: string;
   description: string;
   actionLabel?: string;
+  helper?: string;
 };
 
-export function EmptyState({ title, description, actionLabel }: EmptyStateProps) {
+export function EmptyState({ title, description, actionLabel, helper }: EmptyStateProps) {
   return (
-    <section className="rounded-3xl border border-dashed border-[var(--border)] bg-white/75 p-6 text-center shadow-sm">
+    <section className="tj-card border-dashed p-6 text-center">
       <div className="mx-auto mb-3 flex size-12 items-center justify-center rounded-2xl bg-orange-50 text-2xl">✨</div>
       <h2 className="text-lg font-bold text-[var(--primary-dark)]">{title}</h2>
       <p className="mx-auto mt-2 max-w-sm text-sm leading-6 text-[var(--muted)]">{description}</p>
-      {actionLabel ? (
-        <button className="mt-4 min-h-12 rounded-2xl bg-[var(--primary)] px-4 text-sm font-bold text-white">
-          {actionLabel}
-        </button>
-      ) : null}
+      {helper ? <p className="mx-auto mt-3 max-w-sm rounded-2xl bg-yellow-50 px-3 py-2 text-xs font-semibold leading-5 text-yellow-900">{helper}</p> : null}
+      {actionLabel ? <PrimaryButton className="mt-4">{actionLabel}</PrimaryButton> : null}
     </section>
   );
 }

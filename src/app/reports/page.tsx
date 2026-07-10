@@ -7,11 +7,12 @@ export default function ReportsPage() {
       <PageHeader
         eyebrow="Daily Summary"
         title="Reports"
-        description="Placeholder for daily sales, profit estimate, service fee income, total utang, and low stock."
+        description="Review product sales, estimated profit, service fee income, expected kaha, utang, and low stock."
       />
       <EmptyState
-        title="Reports module ready for build"
-        description="Phase 1 creates the route and shell first. The local database and real forms will be added in the next implementation phases."
+        title="Wala pang report data."
+        description="Phase 2 polishes the shell and reusable UI first. Real data and forms will come after the local database foundation."
+        helper="Reports will separate product sales from GCash/Maya service volume."
       />
     </div>
   );

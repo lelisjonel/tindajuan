@@ -7,12 +7,13 @@ export default function SukiPage() {
       <PageHeader
         eyebrow="Utang Tracker"
         title="Suki"
-        description="Placeholder for customer profiles, balances, partial payments, and ledger history."
-      actionLabel="Add Suki"
+        description="Track suki profiles, balances, partial payments, and ledger history."
+        actionLabel="Add Suki"
       />
       <EmptyState
-        title="Suki module ready for build"
-        description="Phase 1 creates the route and shell first. The local database and real forms will be added in the next implementation phases."
+        title="Wala pang suki record."
+        description="Phase 2 polishes the shell and reusable UI first. Real data and forms will come after the local database foundation."
+        helper="Mag-add ng customer kapag may uutang."
       />
     </div>
   );

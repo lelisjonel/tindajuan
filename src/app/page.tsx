@@ -1,35 +1,32 @@
-import Link from "next/link";
+import { ModuleCard } from "@/components/app/module-card";
+import { MoneyText } from "@/components/app/money-text";
 import { PageHeader } from "@/components/app/page-header";
 import { SummaryCard } from "@/components/app/summary-card";
 
 const quickLinks = [
-  { href: "/benta", label: "Start Benta", helper: "Cash checkout placeholder" },
-  { href: "/paninda", label: "Add Paninda", helper: "Product list placeholder" },
-  { href: "/services", label: "Record Service", helper: "GCash/Maya placeholder" },
+  { href: "/benta", title: "Benta", description: "Fast checkout flow for cash sales.", icon: "🧾" },
+  { href: "/services", title: "Services", description: "GCash/Maya cash-in and cash-out tracker.", icon: "📲" },
+  { href: "/paninda", title: "Paninda", description: "Products, stocks, and low-stock alerts.", icon: "🧃" },
+  { href: "/suki", title: "Suki", description: "Customer utang and payment ledger.", icon: "👥" },
 ];
 
 export default function Home() {
   return (
     <div className="space-y-5">
       <PageHeader
-        eyebrow="TindaJuan Phase 1"
+        eyebrow="TindaJuan Phase 2"
         title="Benta, paninda, utang, kaha — ayos sa isang app."
-        description="Mobile-first foundation for the local-first sari-sari store POS. Placeholder pages are ready so the real workflows can be built phase by phase."
+        description="Offline-ready mobile shell for sari-sari store workflows. The design system is now cleaner, thumb-friendly, and ready for real local data."
       />
 
       <section className="grid gap-3 sm:grid-cols-3">
-        <SummaryCard label="Today&apos;s Benta" value="₱0.00" helper="Ready for checkout flow" />
-        <SummaryCard label="Expected Kaha" value="₱0.00" helper="Cash tracking comes next" accent="yellow" />
-        <SummaryCard label="Low Stock" value="0" helper="Paninda module placeholder" accent="orange" />
+        <SummaryCard label="Today's Benta" value={<MoneyText amount={0} />} helper="Ready for checkout flow" />
+        <SummaryCard label="Expected Kaha" value={<MoneyText amount={0} />} helper="Cash drawer tracking placeholder" accent="yellow" />
+        <SummaryCard label="Service Fee" value={<MoneyText amount={0} />} helper="GCash/Maya fee income only" accent="orange" />
       </section>
 
-      <section className="grid gap-3 sm:grid-cols-3">
-        {quickLinks.map((link) => (
-          <Link className="rounded-3xl border border-[var(--border)] bg-white p-4 shadow-sm transition hover:-translate-y-0.5 hover:border-green-200 hover:shadow-md" href={link.href} key={link.href}>
-            <p className="font-bold text-[var(--primary-dark)]">{link.label}</p>
-            <p className="mt-1 text-sm text-[var(--muted)]">{link.helper}</p>
-          </Link>
-        ))}
+      <section className="grid gap-3 sm:grid-cols-2 xl:grid-cols-4">
+        {quickLinks.map((link) => <ModuleCard key={link.href} {...link} />)}
       </section>
     </div>
   );

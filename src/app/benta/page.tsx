@@ -7,12 +7,13 @@ export default function BentaPage() {
       <PageHeader
         eyebrow="Checkout"
         title="Benta"
-        description="Search paninda, add to cart, compute total/change, and complete sale in the next phases."
-      actionLabel="New Sale"
+        description="Search products, add to cart, compute total/change, and complete cash sale."
+        actionLabel="New Sale"
       />
       <EmptyState
-        title="Benta module ready for build"
-        description="Phase 1 creates the route and shell first. The local database and real forms will be added in the next implementation phases."
+        title="Wala pang benta."
+        description="Phase 2 polishes the shell and reusable UI first. Real data and forms will come after the local database foundation."
+        helper="Mag-add muna ng paninda sa next phase bago tayo gumawa ng real checkout."
       />
     </div>
   );
