@@ -1,0 +1,15 @@
+export const dexieStores = {
+  stores: "id, name, created_at",
+  products: "id, store_id, name, category, is_active, updated_at",
+  inventory_movements: "id, store_id, product_id, type, created_at",
+  sales: "id, store_id, customer_id, payment_type, created_at",
+  sale_items: "id, store_id, sale_id, product_id",
+  customers: "id, store_id, name, phone, updated_at",
+  customer_ledger: "id, store_id, customer_id, type, created_at",
+  payments: "id, store_id, customer_id, created_at",
+  cash_days: "id, store_id, business_date",
+  cash_movements: "id, store_id, business_date, type, category, created_at",
+  wallets: "id, store_id, provider",
+  service_transactions: "id, store_id, provider, type, created_at",
+  wallet_movements: "id, store_id, provider, type, created_at",
+} as const;
