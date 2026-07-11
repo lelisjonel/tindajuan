@@ -31,7 +31,7 @@ TindaJuan should be built as a **mobile-first, local-first PWA** before adding c
 
 ## Current Project Status
 
-Last verified after the Phase 12B implementation and AyosTinda brand refresh:
+Last verified after the Phase 14 backup and recovery implementation:
 
 | Phase | Status | Notes |
 |---|---|---|
@@ -50,15 +50,16 @@ Last verified after the Phase 12B implementation and AyosTinda brand refresh:
 | Phase 12 — CSV Import/Export | ✅ Complete | Inventory CSV import/export and daily/weekly/monthly sales CSV exports implemented. |
 | Phase 12B — Load + Bills Payment Services | ✅ Complete | GCash/Maya load and bills payment tracking with actual wallet deductions, customer pricing, provider charges, net income, Kaha movements, and validation implemented. |
 | Brand Refresh — AyosTinda | ✅ Complete | AyosTinda colors, typography direction, sidebar mark, PWA icons, metadata, manifest, and service labels applied. |
-| Phase 13 — Real Device and Store QA | ⏭️ Next | Test the complete workflow on a real phone with demo amounts and real-store scenarios before adding more features. |
+| Phase 13 — Real Device and Store QA | 🟡 In progress | LAN-ready QA session prepared; real phone/store feedback is still pending. |
+| Phase 14 — Backup and Recovery | ✅ Implementation complete | Full JSON backup export/restore, schema validation, destructive-action confirmation, and local-data warnings implemented; manual phone verification remains. |
 
 ### Current Position
 
-The app is feature-complete through **Phase 12B**. The current working brand is **AyosTinda**, with the product positioned as a simple WebPOS for sari-sari stores:
+The app is feature-complete through **Phase 14 implementation**. The current working brand is **AyosTinda**, with the product positioned as a simple WebPOS for sari-sari stores:
 
 > Benta, paninda, utang, at kaha. Mas ayos sa isang lugar.
 
-The next work is **Phase 13 — Real Device and Store QA**. We should validate the complete workflow on a real phone before expanding the product further. Backup/recovery, usability fixes, and security follow the real-user test results.
+Phase 13 real-device validation remains open, while Phase 14 backup/recovery is implemented and covered by automated tests. Manual verification on a phone should confirm download, restore, and clear-data flows before daily production use.
 
 Automated verification currently passes:
 
@@ -95,7 +96,7 @@ Validate the complete AyosTinda workflow on a real phone using realistic store s
 
 Real-user feedback, screenshots, usability findings, and a prioritized bug list.
 
-## Phase 14 — Backup and Recovery
+## Phase 14 — Backup and Recovery ✅ Implementation complete
 
 ### Goal
 
@@ -111,7 +112,7 @@ Protect local store data before daily production use.
 
 ### Done When
 
-A tester can export a complete backup, clear local data, restore the backup, and verify the important records return correctly.
+A tester can export a complete backup, clear local data, restore the backup, and verify the important records return correctly. Automated repository verification now covers this flow; manual browser/phone verification remains.
 
 ## Phase 15 — Usability Improvements
 
