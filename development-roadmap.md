@@ -53,6 +53,7 @@ Last verified after the Phase 14 backup and recovery implementation:
 | Phase 13 — Real Device and Store QA | ✅ Complete | Full inventory and store workflow tested successfully on a real device with realistic sari-sari store scenarios. |
 | Phase 14 — Backup and Recovery | ✅ Complete | Full JSON backup export/restore, validation, destructive-action confirmation, and local-data warnings implemented and manually tested successfully. |
 | Phase 15 — Usability Improvements | ✅ Complete | Destructive-action confirmations, mobile input modes, clearer Load/Bills Payment pricing guidance, and labeled service fields implemented and tested successfully. |
+| Phase 16 — Data Safety and Privacy | ✅ Complete | Local-first storage, offline limitations, privacy guidance for customer/service data, and recoverable storage/database error messages implemented and verified. |
 
 ### Current Position
 
@@ -60,7 +61,7 @@ The app is feature-complete through **Phase 14 implementation**. The current wor
 
 > Benta, paninda, utang, at kaha. Mas ayos sa isang lugar.
 
-Phases 13–15 are complete and manually verified on a real device. The next phase is Data Safety and Privacy, focused on clearer local-first limitations, privacy messaging, and storage/error recovery guidance.
+Phases 13–16 are complete. The next phase is Pilot Store Testing, focused on controlled daily use with one to three additional store users.
 
 Automated verification currently passes:
 
@@ -142,7 +143,7 @@ Fix confusing or slow workflows found during real phone and store testing.
 
 Real-device testing passed for inventory import, sales, utang, payments, Kaha movements, GCash/Maya services, Load, Bills Payment, Reports, backup/restore, and mobile usability.
 
-## Phase 16 — Data Safety and Privacy
+## Phase 16 — Data Safety and Privacy ✅ Complete
 
 ### Goal
 
@@ -155,6 +156,18 @@ Make local-first behavior and stored customer/service data safer and clearer.
 - Review stored customer phone numbers and account references.
 - Improve error recovery and storage-limit messages.
 - Document offline behavior, backup expectations, and known limitations.
+
+### Delivered
+
+- Data Safety Notice shown during setup and in Settings.
+- Clear explanation that records stay on the current device and browser.
+- Offline, browser-data clearing, private browsing, and device-loss warnings.
+- Privacy guidance for customer phone numbers, names, notes, and service account references.
+- Friendly recovery messages for storage quota, IndexedDB/database, and browser security errors.
+
+### Verification
+
+Automated tests, lint, and production build passed. The data-safety copy is ready for real-store pilot feedback.
 
 ## Phase 17 — Pilot Store Testing
 

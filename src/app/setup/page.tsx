@@ -1,4 +1,5 @@
 import { PageHeader } from "@/components/app/page-header";
+import { DataSafetyNotice } from "@/components/settings/data-safety-notice";
 import { StoreSetupForm } from "@/components/setup/store-setup-form";
 
 export default function SetupPage() {
@@ -9,6 +10,7 @@ export default function SetupPage() {
         title="Set up your tindahan"
         description="Create your local store profile first. AyosTinda saves this in IndexedDB so the app can work offline before cloud sync."
       />
+      <DataSafetyNotice />
       <StoreSetupForm />
     </div>
   );

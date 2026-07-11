@@ -4,6 +4,7 @@ import { useRef, useState } from "react";
 import { PrimaryButton } from "@/components/app/primary-button";
 import { db, resetLocalData } from "@/lib/db/dexie";
 import { exportBackup, parseBackup, restoreBackup } from "@/lib/backup";
+import { friendlyDataError } from "@/lib/errors";
 
 function downloadBackupFile(content: string, filename: string) {
   const blob = new Blob([content], { type: "application/json;charset=utf-8" });
@@ -27,7 +28,7 @@ export function BackupRecoveryCard() {
       downloadBackupFile(JSON.stringify(backup, null, 2), `ayostinda-backup-${backup.exported_at.slice(0, 10)}.json`);
       setStatus("Backup exported. Keep the downloaded file somewhere safe.");
     } catch (error) {
-      setStatus(error instanceof Error ? error.message : "Unable to export backup.");
+      setStatus(friendlyDataError(error, "Unable to export backup."));
     } finally {
       setBusy(false);
     }
@@ -41,7 +42,7 @@ export function BackupRecoveryCard() {
       await restoreBackup(db, backup);
       setStatus("Backup restored. Reload the app to refresh every screen.");
     } catch (error) {
-      setStatus(error instanceof Error ? error.message : "Unable to restore backup.");
+      setStatus(friendlyDataError(error, "Unable to restore backup."));
     } finally {
       setBusy(false);
       if (inputRef.current) inputRef.current.value = "";
@@ -55,7 +56,7 @@ export function BackupRecoveryCard() {
       await resetLocalData(db);
       setStatus("Local data cleared. Reload the app to return to setup.");
     } catch (error) {
-      setStatus(error instanceof Error ? error.message : "Unable to clear local data.");
+      setStatus(friendlyDataError(error, "Unable to clear local data."));
     } finally {
       setBusy(false);
     }
