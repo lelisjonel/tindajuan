@@ -10,11 +10,11 @@ const read = (...parts) => readFileSync(file(...parts), "utf8");
 describe("Phase 11 PWA polish", () => {
   it("defines an installable manifest with app icons and standalone display", () => {
     const manifest = JSON.parse(read("public", "manifest.webmanifest"));
-    assert.equal(manifest.name, "TindaJuan");
-    assert.equal(manifest.short_name, "TindaJuan");
+    assert.equal(manifest.name, "AyosTinda");
+    assert.equal(manifest.short_name, "AyosTinda");
     assert.equal(manifest.display, "standalone");
     assert.equal(manifest.start_url, "/");
-    assert.equal(manifest.theme_color, "#16A34A");
+    assert.equal(manifest.theme_color, "#16803C");
     assert.ok(manifest.icons.some((icon) => icon.sizes === "192x192"));
     assert.ok(manifest.icons.some((icon) => icon.sizes === "512x512"));
   });

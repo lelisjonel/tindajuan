@@ -31,7 +31,7 @@ TindaJuan should be built as a **mobile-first, local-first PWA** before adding c
 
 ## Current Project Status
 
-Last verified after the Phase 12 implementation:
+Last verified after the Phase 12B implementation and AyosTinda brand refresh:
 
 | Phase | Status | Notes |
 |---|---|---|
@@ -48,18 +48,132 @@ Last verified after the Phase 12 implementation:
 | Phase 10 — Reports | ✅ Complete | Daily sales, profit, utang, Kaha, wallet, and low-stock summaries working. |
 | Phase 11 — PWA + Real Store Testing | 🟡 Foundation complete | Manifest, icons, service worker, and offline fallback implemented; real device/store testing remains. |
 | Phase 12 — CSV Import/Export | ✅ Complete | Inventory CSV import/export and daily/weekly/monthly sales CSV exports implemented. |
+| Phase 12B — Load + Bills Payment Services | ✅ Complete | GCash/Maya load and bills payment tracking with actual wallet deductions, customer pricing, provider charges, net income, Kaha movements, and validation implemented. |
+| Brand Refresh — AyosTinda | ✅ Complete | AyosTinda colors, typography direction, sidebar mark, PWA icons, metadata, manifest, and service labels applied. |
+| Phase 13 — Real Device and Store QA | ⏭️ Next | Test the complete workflow on a real phone with demo amounts and real-store scenarios before adding more features. |
 
 ### Current Position
 
-The local-first MVP is feature-complete through **Phase 12** and has passing automated verification. The next work should focus on real-user testing, backup/recovery, usability fixes, and security before production store use.
+The app is feature-complete through **Phase 12B**. The current working brand is **AyosTinda**, with the product positioned as a simple WebPOS for sari-sari stores:
+
+> Benta, paninda, utang, at kaha. Mas ayos sa isang lugar.
+
+The next work is **Phase 13 — Real Device and Store QA**. We should validate the complete workflow on a real phone before expanding the product further. Backup/recovery, usability fixes, and security follow the real-user test results.
 
 Automated verification currently passes:
 
 ```txt
-npm test       ✅ 24 tests passed
+npm test       ✅ 28 tests passed
 npm run lint   ✅ passed
 npm run build  ✅ passed
 ```
+
+---
+
+# Next Roadmap Phases
+
+## Phase 13 — Real Device and Store QA
+
+### Goal
+
+Validate the complete AyosTinda workflow on a real phone using realistic store scenarios before adding more major features.
+
+### Test Scope
+
+- Add 20–50 products.
+- Complete normal cash sales and verify stock deduction.
+- Record utang and partial payments.
+- Record personal kuha and store expenses.
+- Test GCash/Maya cash-in and cash-out.
+- Test Load and Bills Payment with provider charges and customer pricing.
+- Check daily reports and compare expected Kaha with actual cash.
+- Reload the app and verify local data persists.
+- Test offline reopen, mobile navigation, and touch targets.
+- Test CSV import/export on a real device where practical.
+
+### Output
+
+Real-user feedback, screenshots, usability findings, and a prioritized bug list.
+
+## Phase 14 — Backup and Recovery
+
+### Goal
+
+Protect local store data before daily production use.
+
+### Build
+
+- Full local database export and restore.
+- Backup file validation and version/date metadata.
+- Store profile, products, sales, utang, Kaha, wallet, and service records included.
+- Confirmation before reset or destructive actions.
+- Recovery instructions and data-loss warnings.
+
+### Done When
+
+A tester can export a complete backup, clear local data, restore the backup, and verify the important records return correctly.
+
+## Phase 15 — Usability Improvements
+
+### Goal
+
+Fix confusing or slow workflows found during real phone and store testing.
+
+### Focus Areas
+
+- Faster Benta recording and less typing.
+- Clearer Load/Bills Payment pricing fields.
+- Better Kaha reconciliation language.
+- Improved mobile spacing, button hierarchy, and empty states.
+- Clear archive, reset, and destructive-action confirmations.
+- Finalize Taglish labels and AyosTinda copy.
+
+## Phase 16 — Data Safety and Privacy
+
+### Goal
+
+Make local-first behavior and stored customer/service data safer and clearer.
+
+### Build
+
+- Explain that data is stored on the current device/browser.
+- Warn users about browser-data clearing and device loss.
+- Review stored customer phone numbers and account references.
+- Improve error recovery and storage-limit messages.
+- Document offline behavior, backup expectations, and known limitations.
+
+## Phase 17 — Pilot Store Testing
+
+### Goal
+
+Run AyosTinda in a controlled real-store pilot before public release.
+
+### Done When
+
+- Jonel can use the app without assistance.
+- Kaha and wallet balances reconcile with actual amounts.
+- Recording a transaction is faster or clearer than the paper notebook.
+- No data-loss incidents occur during the pilot.
+- Feedback from one to three additional store users is collected and reviewed.
+
+## Phase 18 — MVP Release / v1.0
+
+### Goal
+
+Prepare a stable local-first AyosTinda release for wider use.
+
+### Build
+
+- Stable production deployment.
+- Complete backup and restore.
+- Polished phone and tablet UI.
+- Final AyosTinda brand assets and documentation.
+- User guide and real-store testing checklist.
+- Production smoke test for routes, manifest, icons, service worker, and offline shell.
+
+### Post-v1.0 Candidates
+
+Cloud sync, authentication, multi-device access, multi-user roles, supplier management, barcode scanning, receipt printing, advanced charts, subscriptions, and official GCash/Maya API integrations remain later initiatives.
 
 ---
 

@@ -1,21 +1,21 @@
 @import "tailwindcss";
 
 :root {
-  --color-primary-green: #16a34a;
-  --color-dark-green: #14532d;
-  --color-warm-orange: #f97316;
-  --color-soft-yellow: #facc15;
-  --color-background: #fffdf7;
+  --color-primary-green: #16803c;
+  --color-dark-green: #0f542c;
+  --color-warm-orange: #f47b20;
+  --color-soft-yellow: #fbd38e;
+  --color-background: #fff9ee;
   --color-surface: #ffffff;
-  --color-text-dark: #1f2937;
-  --color-text-muted: #6b7280;
-  --color-border: #e5e7eb;
+  --color-text-dark: #243126;
+  --color-text-muted: #718078;
+  --color-border: #e6ebe3;
   --color-danger: #dc2626;
-  --color-success: #16a34a;
+  --color-success: #16803c;
   --color-warning: #f59e0b;
   --color-info: #2563eb;
-  --radius-card: 1.5rem;
-  --radius-control: 1rem;
+  --radius-card: 1.375rem;
+  --radius-control: 0.875rem;
   --touch-target: 44px;
   --bottom-nav-height: 72px;
 
@@ -34,7 +34,7 @@
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
+  --font-sans: "Plus Jakarta Sans", var(--font-geist-sans), Inter, system-ui, sans-serif;
   --font-mono: var(--font-geist-mono);
 }
 
@@ -50,11 +50,11 @@ html {
 body {
   min-height: 100%;
   background:
-    radial-gradient(circle at top left, rgba(250, 204, 21, 0.22), transparent 28rem),
-    radial-gradient(circle at top right, rgba(22, 163, 74, 0.12), transparent 24rem),
+    radial-gradient(circle at top left, rgba(251, 211, 142, 0.25), transparent 28rem),
+    radial-gradient(circle at top right, rgba(22, 128, 60, 0.12), transparent 24rem),
     var(--background);
   color: var(--foreground);
-  font-family: var(--font-geist-sans), "Plus Jakarta Sans", Inter, system-ui, sans-serif;
+  font-family: "Plus Jakarta Sans", var(--font-geist-sans), Inter, system-ui, sans-serif;
 }
 
 a {
@@ -73,7 +73,13 @@ textarea {
   border: 1px solid var(--border);
   border-radius: var(--radius-card);
   background: rgba(255, 255, 255, 0.92);
-  box-shadow: 0 16px 40px rgba(20, 83, 45, 0.08);
+  box-shadow: 0 18px 45px rgba(15, 84, 44, 0.09);
+  transition: border-color 160ms ease, box-shadow 160ms ease, transform 160ms ease;
+}
+
+.tj-card:hover {
+  border-color: rgba(22, 128, 60, 0.22);
+  box-shadow: 0 20px 48px rgba(15, 84, 44, 0.12);
 }
 
 .tj-input {
@@ -89,7 +95,7 @@ textarea {
 
 .tj-input:focus {
   border-color: var(--primary);
-  box-shadow: 0 0 0 4px rgba(22, 163, 74, 0.14);
+  box-shadow: 0 0 0 4px rgba(22, 128, 60, 0.14);
 }
 
 .tj-touch-target {

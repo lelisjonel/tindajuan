@@ -117,6 +117,8 @@ export type CashMovement = BaseRecord & {
 
 export type WalletProvider = "gcash" | "maya";
 
+export type ServiceType = "cash_in" | "cash_out" | "load" | "bills_payment";
+
 export type Wallet = BaseRecord & {
   store_id: string;
   provider: WalletProvider;
@@ -128,9 +130,20 @@ export type ServiceTransaction = BaseRecord & {
   store_id: string;
   provider: WalletProvider;
   type: "cash_in" | "cash_out";
+  service_type?: ServiceType;
   amount: number;
   service_fee: number;
   fee_method: "add_on_top" | "deduct_from_amount";
+  face_value?: number;
+  wallet_deduction?: number;
+  customer_price?: number;
+  provider_fee?: number;
+  customer_fee?: number;
+  net_service_income?: number;
+  product_name?: string;
+  mobile_number?: string;
+  biller?: string;
+  account_reference?: string;
   reference_number?: string;
   customer_name?: string;
   notes?: string;
@@ -141,7 +154,7 @@ export type WalletMovement = BaseRecord & {
   wallet_id: string;
   provider: WalletProvider;
   type: "wallet_in" | "wallet_out";
-  category: "cash_in_service" | "cash_out_service" | "top_up" | "transfer_out" | "adjustment";
+  category: "cash_in_service" | "cash_out_service" | "load_service" | "bills_payment_service" | "top_up" | "transfer_out" | "adjustment";
   amount: number;
   previous_balance: number;
   new_balance: number;

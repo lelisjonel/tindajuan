@@ -34,7 +34,7 @@ export const reportsRepository = {
     const dailyServices = serviceTransactions.filter((transaction) => getBusinessDate(new Date(transaction.created_at)) === businessDate);
     const productSales = dailySales.reduce((sum, sale) => sum + sale.total_amount, 0);
     const estimatedProductProfit = dailySales.reduce((sum, sale) => sum + sale.estimated_profit, 0);
-    const serviceFeeIncome = dailyServices.reduce((sum, transaction) => sum + transaction.service_fee, 0);
+    const serviceFeeIncome = dailyServices.reduce((sum, transaction) => sum + (transaction.net_service_income ?? transaction.service_fee), 0);
     const cashIn = cashMovements.filter((movement) => movement.type === "cash_in").reduce((sum, movement) => sum + movement.amount, 0);
     const cashOut = cashMovements.filter((movement) => movement.type === "cash_out").reduce((sum, movement) => sum + movement.amount, 0);
     const totalUtang = customers.reduce((sum, customer) => sum + customer.balance, 0);

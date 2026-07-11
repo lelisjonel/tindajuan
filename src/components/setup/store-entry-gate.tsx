@@ -31,7 +31,7 @@ export function StoreEntryGate() {
 
   return (
     <EmptyState
-      title="Opening TindaJuan..."
+      title="Opening AyosTinda..."
       description="Benta, paninda, utang, kaha — ayos sa isang app."
       helper={status}
     />

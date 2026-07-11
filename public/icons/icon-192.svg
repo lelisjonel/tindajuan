@@ -1,8 +1,9 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 192 192" role="img" aria-label="TindaJuan">
-  <rect width="192" height="192" rx="42" fill="#16A34A"/>
-  <path d="M39 77h114l-8 70H47z" fill="#FFFDF7"/>
-  <path d="M35 77h122l-15-31H50z" fill="#FACC15"/>
-  <path d="M62 46v31M96 46v31M130 46v31" stroke="#F97316" stroke-width="9"/>
-  <path d="M75 147V99h42v48" fill="#16A34A"/>
-  <circle cx="96" cy="61" r="12" fill="#14532D"/>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 192 192" role="img" aria-label="AyosTinda">
+  <rect width="192" height="192" rx="42" fill="#0F542C"/>
+  <path d="M39 82h114v65H39z" fill="#FFF9EE"/>
+  <path d="M31 82h130l-16-35H47z" fill="#F47B20"/>
+  <path d="M51 47h90" stroke="#FBD38E" stroke-width="9" stroke-linecap="round"/>
+  <path d="M67 147 91 91h12l24 56h-15l-5-14H86l-5 14zm24-27h12l-6-17z" fill="#16803C"/>
+  <circle cx="145" cy="139" r="22" fill="#16803C" stroke="#FFF9EE" stroke-width="6"/>
+  <path d="m134 139 7 7 15-17" fill="none" stroke="#FFF9EE" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"/>
 </svg>

@@ -1,12 +1,12 @@
 {
-  "name": "TindaJuan",
-  "short_name": "TindaJuan",
-  "description": "Mobile-first POS and tindahan tracker for Filipino sari-sari stores.",
+  "name": "AyosTinda",
+  "short_name": "AyosTinda",
+  "description": "Simple WebPOS para sa mas ayos na sari-sari store.",
   "start_url": "/",
   "scope": "/",
   "display": "standalone",
-  "background_color": "#FFFDF7",
-  "theme_color": "#16A34A",
+  "background_color": "#FFF9EE",
+  "theme_color": "#16803C",
   "lang": "en-PH",
   "icons": [
     {

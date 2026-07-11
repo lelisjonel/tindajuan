@@ -15,14 +15,14 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "TindaJuan",
-  description: "Mobile-first POS and tindahan tracker for Filipino sari-sari stores.",
-  applicationName: "TindaJuan",
+  title: "AyosTinda",
+  description: "Simple WebPOS para sa mas ayos na sari-sari store.",
+  applicationName: "AyosTinda",
   manifest: "/manifest.webmanifest",
   appleWebApp: {
     capable: true,
     statusBarStyle: "default",
-    title: "TindaJuan",
+    title: "AyosTinda",
   },
   icons: {
     icon: [
@@ -35,7 +35,7 @@ export const metadata: Metadata = {
 export const viewport: Viewport = {
   width: "device-width",
   initialScale: 1,
-  themeColor: "#16A34A",
+  themeColor: "#16803C",
 };
 
 export default function RootLayout({

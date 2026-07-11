@@ -19,10 +19,10 @@ export function DesktopSidebar() {
   return (
     <aside className="sticky top-0 hidden h-screen w-72 shrink-0 border-r border-green-100 bg-white/90 p-5 backdrop-blur lg:block">
       <Link className="mb-8 flex items-center gap-3" href="/">
-        <div className="flex size-12 items-center justify-center rounded-2xl bg-[var(--primary)] text-lg font-black text-white shadow-sm">TJ</div>
+        <div className="relative flex size-12 items-center justify-center rounded-2xl bg-[var(--accent)] text-lg font-black text-white shadow-[0_8px_18px_rgba(244,123,32,0.25)] after:absolute after:-bottom-1 after:-right-1 after:flex after:size-5 after:items-center after:justify-center after:rounded-full after:border-2 after:border-white after:bg-[var(--primary)] after:text-[10px] after:content-['✓']">A</div>
         <div>
-          <p className="text-xl font-black text-[var(--primary-dark)]">TindaJuan</p>
-          <p className="text-xs font-semibold text-[var(--muted)]">Sari-sari store POS</p>
+          <p className="text-xl font-black tracking-[-0.05em] text-[var(--primary-dark)]">AyosTinda</p>
+          <p className="text-xs font-semibold text-[var(--muted)]">Simple WebPOS</p>
         </div>
       </Link>
 

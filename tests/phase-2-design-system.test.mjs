@@ -8,15 +8,15 @@ const src = (...parts) => join(root, 'src', ...parts);
 const read = (...parts) => readFileSync(src(...parts), 'utf8');
 
 describe('Phase 2 design system and mobile app shell', () => {
-  it('defines TindaJuan brand tokens and reusable utility classes', () => {
+  it('defines AyosTinda brand tokens and reusable utility classes', () => {
     const css = read('app', 'globals.css');
 
     for (const token of [
-      '--color-primary-green: #16a34a',
-      '--color-dark-green: #14532d',
-      '--color-warm-orange: #f97316',
-      '--color-soft-yellow: #facc15',
-      '--radius-card: 1.5rem',
+      '--color-primary-green: #16803c',
+      '--color-dark-green: #0f542c',
+      '--color-warm-orange: #f47b20',
+      '--color-soft-yellow: #fbd38e',
+      '--radius-card: 1.375rem',
       '--touch-target: 44px',
     ]) {
       assert.match(css, new RegExp(token.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')));
@@ -50,7 +50,7 @@ describe('Phase 2 design system and mobile app shell', () => {
     assert.match(appShell, /safe-bottom-padding/);
     assert.match(bottomNav, /pb-\[calc\(0\.5rem\+env\(safe-area-inset-bottom\)\)\]/);
     assert.match(bottomNav, /min-h-\[var\(--touch-target\)\]/);
-    assert.match(desktopSidebar, /TindaJuan/);
+    assert.match(desktopSidebar, /AyosTinda/);
 
     for (const label of ['Benta', 'Services', 'Paninda', 'Suki', 'Kaha', 'Reports', 'Settings']) {
       assert.match(desktopSidebar, new RegExp(label));

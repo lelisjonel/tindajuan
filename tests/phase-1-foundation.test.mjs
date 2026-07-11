@@ -16,12 +16,12 @@ describe('Phase 1 project foundation', () => {
     }
   });
 
-  it('uses TindaJuan metadata and app shell instead of create-next-app defaults', () => {
+  it('uses AyosTinda metadata and app shell instead of create-next-app defaults', () => {
     const layout = read('app', 'layout.tsx');
     const home = read('app', 'page.tsx');
 
-    assert.match(layout, /title:\s*"TindaJuan"/);
-    assert.match(layout, /description:\s*"Mobile-first POS/);
+    assert.match(layout, /title:\s*"AyosTinda"/);
+    assert.match(layout, /description:\s*"Simple WebPOS/);
     assert.doesNotMatch(home, /Create Next App/i);
     assert.match(home, /StoreEntryGate/);
   });
