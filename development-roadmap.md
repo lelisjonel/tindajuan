@@ -50,9 +50,9 @@ Last verified after the Phase 14 backup and recovery implementation:
 | Phase 12 — CSV Import/Export | ✅ Complete | Inventory CSV import/export and daily/weekly/monthly sales CSV exports implemented. |
 | Phase 12B — Load + Bills Payment Services | ✅ Complete | GCash/Maya load and bills payment tracking with actual wallet deductions, customer pricing, provider charges, net income, Kaha movements, and validation implemented. |
 | Brand Refresh — AyosTinda | ✅ Complete | AyosTinda colors, typography direction, sidebar mark, PWA icons, metadata, manifest, and service labels applied. |
-| Phase 13 — Real Device and Store QA | 🟡 In progress | LAN-ready QA session prepared; real phone/store feedback is still pending. |
-| Phase 14 — Backup and Recovery | ✅ Implementation complete | Full JSON backup export/restore, schema validation, destructive-action confirmation, and local-data warnings implemented; manual phone verification remains. |
-| Phase 15 — Usability Improvements | ✅ Implementation complete | Added destructive-action confirmations, mobile input modes, clearer Load/Bills Payment pricing guidance, and labeled service fields; real-user polish may continue from phone feedback. |
+| Phase 13 — Real Device and Store QA | ✅ Complete | Full inventory and store workflow tested successfully on a real device with realistic sari-sari store scenarios. |
+| Phase 14 — Backup and Recovery | ✅ Complete | Full JSON backup export/restore, validation, destructive-action confirmation, and local-data warnings implemented and manually tested successfully. |
+| Phase 15 — Usability Improvements | ✅ Complete | Destructive-action confirmations, mobile input modes, clearer Load/Bills Payment pricing guidance, and labeled service fields implemented and tested successfully. |
 
 ### Current Position
 
@@ -60,7 +60,7 @@ The app is feature-complete through **Phase 14 implementation**. The current wor
 
 > Benta, paninda, utang, at kaha. Mas ayos sa isang lugar.
 
-Phase 13 real-device validation remains open. Phase 14 backup/recovery and the first Phase 15 usability slice are implemented and covered by automated tests. Manual verification on a phone should confirm the flows before daily production use.
+Phases 13–15 are complete and manually verified on a real device. The next phase is Data Safety and Privacy, focused on clearer local-first limitations, privacy messaging, and storage/error recovery guidance.
 
 Automated verification currently passes:
 
@@ -113,9 +113,9 @@ Protect local store data before daily production use.
 
 ### Done When
 
-A tester can export a complete backup, clear local data, restore the backup, and verify the important records return correctly. Automated repository verification now covers this flow; manual browser/phone verification remains.
+A tester can export a complete backup, clear local data, restore the backup, and verify the important records return correctly. Automated and real-device verification passed.
 
-## Phase 15 — Usability Improvements ✅ Initial slice complete
+## Phase 15 — Usability Improvements ✅ Complete
 
 ### Goal
 
@@ -137,6 +137,10 @@ Fix confusing or slow workflows found during real phone and store testing.
 - Use mobile-friendly search, decimal, and telephone keyboards.
 - Explain Face Value, Wallet Deduction, and Customer Pays in the Load/Bills Payment form.
 - Label Load product, Mobile Number, Biller, and Account Reference fields clearly.
+
+### Verification
+
+Real-device testing passed for inventory import, sales, utang, payments, Kaha movements, GCash/Maya services, Load, Bills Payment, Reports, backup/restore, and mobile usability.
 
 ## Phase 16 — Data Safety and Privacy
 
