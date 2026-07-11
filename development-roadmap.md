@@ -25,6 +25,41 @@ TindaJuan should be built as a **mobile-first, local-first PWA** before adding c
 9. **GCash/Maya Services**
 10. **Reports**
 11. **PWA Polish + Real Store Testing**
+12. **CSV Import/Export + Period Reports**
+
+---
+
+## Current Project Status
+
+Last verified after the Phase 12 implementation:
+
+| Phase | Status | Notes |
+|---|---|---|
+| Phase 0 — Planning and Scope | ✅ Complete | MVP scope, schema, design system, and roadmap documented. |
+| Phase 1 — Project Foundation | ✅ Complete | Next.js app, routes, metadata, and Git repository working. |
+| Phase 2 — Design System + App Shell | ✅ Complete | Responsive mobile-first shell and reusable UI components implemented. |
+| Phase 3 — Local Database Foundation | ✅ Complete | Dexie/IndexedDB repositories and demo seed implemented. |
+| Phase 4 — Store Setup + Demo Mode | ✅ Complete | First-run setup and demo data flow working. |
+| Phase 5 — Paninda / Products | ✅ Complete | Product CRUD, archive, search, low stock, and stock adjustments working. |
+| Phase 6 — Benta / Cash Checkout | ✅ Complete | Cash checkout, change, stock deduction, and cash movement working. |
+| Phase 7 — Suki / Utang | ✅ Complete | Utang, partial payments, balances, and ledger history working. |
+| Phase 8 — Kaha Tracker | ✅ Complete | Starting cash, cash-in/out, personal kuha, and expected Kaha working. |
+| Phase 9 — GCash/Maya Services | ✅ Complete | Wallet balances, cash-in/out, service fees, and Kaha integration working. |
+| Phase 10 — Reports | ✅ Complete | Daily sales, profit, utang, Kaha, wallet, and low-stock summaries working. |
+| Phase 11 — PWA + Real Store Testing | 🟡 Foundation complete | Manifest, icons, service worker, and offline fallback implemented; real device/store testing remains. |
+| Phase 12 — CSV Import/Export | ✅ Complete | Inventory CSV import/export and daily/weekly/monthly sales CSV exports implemented. |
+
+### Current Position
+
+The local-first MVP is feature-complete through **Phase 12** and has passing automated verification. The next work should focus on real-user testing, backup/recovery, usability fixes, and security before production store use.
+
+Automated verification currently passes:
+
+```txt
+npm test       ✅ 24 tests passed
+npm run lint   ✅ passed
+npm run build  ✅ passed
+```
 
 ---
 
@@ -53,7 +88,7 @@ Prepare the product direction, MVP scope, tech stack, and implementation rules.
 
 ## Status
 
-Mostly done.
+Complete. The planned MVP scope, non-goals, data model, and development process are documented.
 
 ---
 
