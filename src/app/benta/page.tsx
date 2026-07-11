@@ -7,7 +7,7 @@ export default function BentaPage() {
       <PageHeader
         eyebrow="Checkout"
         title="Benta"
-        description="Demo cash checkout using local IndexedDB data. Try adding products, entering cash received, and completing a sale."
+        description="Cash checkout using local Paninda products. Search items, build a cart, enter cash received, and complete a real local sale."
       />
       <BentaDemo />
     </div>

@@ -154,7 +154,15 @@ export type DailySummary = {
   product_sales: number;
   estimated_product_profit: number;
   service_fee_income: number;
+  cash_sales: number;
+  utang_sales: number;
+  utang_payments: number;
+  cash_in: number;
+  cash_out: number;
   expected_kaha: number;
   total_utang: number;
   low_stock_count: number;
+  low_stock_products: string[];
+  gcash_balance: number;
+  maya_balance: number;
 };

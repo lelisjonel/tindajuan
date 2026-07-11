@@ -1,5 +1,5 @@
-import { EmptyState } from "@/components/app/empty-state";
 import { PageHeader } from "@/components/app/page-header";
+import { StoreProfileCard } from "@/components/setup/store-profile-card";
 
 export default function SettingsPage() {
   return (
@@ -7,14 +7,9 @@ export default function SettingsPage() {
       <PageHeader
         eyebrow="Store Setup"
         title="Settings"
-        description="Set store profile, preferences, and future backup/export options."
-        actionLabel="Save Store"
+        description="Review the local store profile saved in IndexedDB. Editing, backup, and export options can come in later phases."
       />
-      <EmptyState
-        title="Wala pang store profile."
-        description="Phase 2 polishes the shell and reusable UI first. Real data and forms will come after the local database foundation."
-        helper="Local-first muna tayo before cloud accounts and sync."
-      />
+      <StoreProfileCard />
     </div>
   );
 }

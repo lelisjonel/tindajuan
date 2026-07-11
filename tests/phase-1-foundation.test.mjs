@@ -8,7 +8,7 @@ const src = (...parts) => join(root, 'src', ...parts);
 const read = (...parts) => readFileSync(src(...parts), 'utf8');
 
 describe('Phase 1 project foundation', () => {
-  const routes = ['benta', 'services', 'paninda', 'suki', 'menu', 'kaha', 'reports', 'settings'];
+  const routes = ['setup', 'benta', 'services', 'paninda', 'suki', 'menu', 'kaha', 'reports', 'settings'];
 
   it('has a public page for each initial MVP route', () => {
     for (const route of routes) {
@@ -23,7 +23,7 @@ describe('Phase 1 project foundation', () => {
     assert.match(layout, /title:\s*"TindaJuan"/);
     assert.match(layout, /description:\s*"Mobile-first POS/);
     assert.doesNotMatch(home, /Create Next App/i);
-    assert.match(home, /Benta, paninda, utang, kaha/);
+    assert.match(home, /StoreEntryGate/);
   });
 
   it('defines mobile-first navigation with the five primary tabs and menu routes', () => {

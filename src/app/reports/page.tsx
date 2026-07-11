@@ -1,5 +1,5 @@
-import { EmptyState } from "@/components/app/empty-state";
 import { PageHeader } from "@/components/app/page-header";
+import { ReportsManager } from "@/components/reports/reports-manager";
 
 export default function ReportsPage() {
   return (
@@ -9,11 +9,7 @@ export default function ReportsPage() {
         title="Reports"
         description="Review product sales, estimated profit, service fee income, expected kaha, utang, and low stock."
       />
-      <EmptyState
-        title="Wala pang report data."
-        description="Phase 2 polishes the shell and reusable UI first. Real data and forms will come after the local database foundation."
-        helper="Reports will separate product sales from GCash/Maya service volume."
-      />
+      <ReportsManager />
     </div>
   );
 }

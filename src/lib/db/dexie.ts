@@ -121,12 +121,30 @@ export async function seedDemoStore(database: TindaJuanDb = db): Promise<Store> 
     ...baseRecord(),
     store_id: store.id,
     business_date: getBusinessDate(),
-    starting_cash: 0,
+    starting_cash: 50000,
   };
 
-  await database.transaction("rw", database.stores, database.products, database.wallets, database.cash_days, async () => {
+  await database.transaction("rw", database.stores, database.products, database.customers, database.wallets, database.cash_days, async () => {
     await database.stores.add(store);
     await database.products.bulkAdd(products);
+    await database.customers.bulkAdd([
+      {
+        ...baseRecord(),
+        store_id: store.id,
+        name: "Maria Santos",
+        phone: "09171234567",
+        notes: "Sample suki for utang testing",
+        balance: 0,
+      },
+      {
+        ...baseRecord(),
+        store_id: store.id,
+        name: "Mang Ben",
+        phone: "09179876543",
+        notes: "Sample suki for payment testing",
+        balance: 0,
+      },
+    ]);
     await database.wallets.bulkAdd(wallets);
     await database.cash_days.add(cashDay);
   });

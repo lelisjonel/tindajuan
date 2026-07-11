@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" role="img" aria-label="TindaJuan">
+  <rect width="512" height="512" rx="112" fill="#16A34A"/>
+  <path d="M104 205h304l-21 187H125z" fill="#FFFDF7"/>
+  <path d="M93 205h326l-40-83H133z" fill="#FACC15"/>
+  <path d="M165 122v83M256 122v83M347 122v83" stroke="#F97316" stroke-width="24"/>
+  <path d="M200 392V264h112v128" fill="#16A34A"/>
+  <circle cx="256" cy="162" r="32" fill="#14532D"/>
+</svg>

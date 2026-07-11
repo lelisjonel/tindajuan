@@ -28,7 +28,7 @@ describe('Benta demo checkout UI', () => {
       'reportsRepository.getDailySummary',
       'resetLocalData',
       'Cash Received',
-      'Complete Demo Sale',
+      'Complete Cash Sale',
       'Change',
     ]) {
       assert.match(demo, new RegExp(expected.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')));

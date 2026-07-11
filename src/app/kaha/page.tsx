@@ -1,5 +1,5 @@
-import { EmptyState } from "@/components/app/empty-state";
 import { PageHeader } from "@/components/app/page-header";
+import { KahaManager } from "@/components/kaha/kaha-manager";
 
 export default function KahaPage() {
   return (
@@ -7,14 +7,10 @@ export default function KahaPage() {
       <PageHeader
         eyebrow="Cash Drawer"
         title="Kaha"
-        description="Track starting cash, manual cash-in, manual cash-out, and expected drawer balance."
+        description="Track starting cash, manual cash-in, manual cash-out, and expected drawer balance. Nababawas ito sa kaha, pero hindi ito binabawas sa kita ng tindahan."
         actionLabel="Record Movement"
       />
-      <EmptyState
-        title="Wala pang galaw sa kaha."
-        description="Phase 2 polishes the shell and reusable UI first. Real data and forms will come after the local database foundation."
-        helper="Nababawas ito sa kaha, pero hindi ito binabawas sa kita ng tindahan."
-      />
+      <KahaManager />
     </div>
   );
 }

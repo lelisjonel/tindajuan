@@ -15,6 +15,10 @@ export type ServiceTransactionInput = {
 
 export const servicesRepository = {
   async recordServiceTransaction(db: TindaJuanDb, input: ServiceTransactionInput): Promise<ServiceTransaction> {
+    if (input.amount <= 0) throw new Error("Service amount must be greater than zero.");
+    if (input.service_fee < 0) throw new Error("Service fee cannot be negative.");
+    if (input.type === "cash_out" && input.service_fee > input.amount) throw new Error("Service fee cannot exceed cash-out amount.");
+
     const wallet = await db.wallets
       .where("store_id")
       .equals(input.store_id)
@@ -32,6 +36,7 @@ export const servicesRepository = {
     const walletMovementAmount = input.amount;
     const previousBalance = wallet.current_balance;
     const newBalance = input.type === "cash_in" ? previousBalance - walletMovementAmount : previousBalance + walletMovementAmount;
+    if (newBalance < 0) throw new Error(`Insufficient ${input.provider} wallet balance.`);
     const walletMovement: WalletMovement = {
       ...baseRecord(),
       store_id: input.store_id,

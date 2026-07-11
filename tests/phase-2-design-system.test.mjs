@@ -57,14 +57,15 @@ describe('Phase 2 design system and mobile app shell', () => {
     }
   });
 
-  it('uses polished cards and Taglish empty states on the home and module pages', () => {
+  it('uses polished cards and Taglish empty states on the setup and module pages', () => {
     const home = read('app', 'page.tsx');
-    const paninda = read('app', 'paninda', 'page.tsx');
+    const setupForm = read('components', 'setup', 'store-setup-form.tsx');
+    const paninda = read('components', 'paninda', 'paninda-manager.tsx');
     const kaha = read('app', 'kaha', 'page.tsx');
 
-    assert.match(home, /MoneyText/);
-    assert.match(home, /ModuleCard/);
-    assert.match(home, /Offline-ready/);
+    assert.match(home, /StoreEntryGate/);
+    assert.match(setupForm, /tj-card/);
+    assert.match(setupForm, /Load Demo Data/);
     assert.match(paninda, /Wala pang paninda/);
     assert.match(kaha, /Nababawas ito sa kaha/);
   });
