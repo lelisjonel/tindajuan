@@ -38,6 +38,7 @@ export function StoreSetupForm() {
   }
 
   async function loadDemoData() {
+    if (!window.confirm("Load demo data? This will replace the current local store data.")) return;
     await finishSetup(async () => {
       await resetLocalData(db);
       await seedDemoStore(db);

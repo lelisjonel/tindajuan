@@ -52,6 +52,7 @@ Last verified after the Phase 14 backup and recovery implementation:
 | Brand Refresh — AyosTinda | ✅ Complete | AyosTinda colors, typography direction, sidebar mark, PWA icons, metadata, manifest, and service labels applied. |
 | Phase 13 — Real Device and Store QA | 🟡 In progress | LAN-ready QA session prepared; real phone/store feedback is still pending. |
 | Phase 14 — Backup and Recovery | ✅ Implementation complete | Full JSON backup export/restore, schema validation, destructive-action confirmation, and local-data warnings implemented; manual phone verification remains. |
+| Phase 15 — Usability Improvements | ✅ Implementation complete | Added destructive-action confirmations, mobile input modes, clearer Load/Bills Payment pricing guidance, and labeled service fields; real-user polish may continue from phone feedback. |
 
 ### Current Position
 
@@ -59,7 +60,7 @@ The app is feature-complete through **Phase 14 implementation**. The current wor
 
 > Benta, paninda, utang, at kaha. Mas ayos sa isang lugar.
 
-Phase 13 real-device validation remains open, while Phase 14 backup/recovery is implemented and covered by automated tests. Manual verification on a phone should confirm download, restore, and clear-data flows before daily production use.
+Phase 13 real-device validation remains open. Phase 14 backup/recovery and the first Phase 15 usability slice are implemented and covered by automated tests. Manual verification on a phone should confirm the flows before daily production use.
 
 Automated verification currently passes:
 
@@ -114,7 +115,7 @@ Protect local store data before daily production use.
 
 A tester can export a complete backup, clear local data, restore the backup, and verify the important records return correctly. Automated repository verification now covers this flow; manual browser/phone verification remains.
 
-## Phase 15 — Usability Improvements
+## Phase 15 — Usability Improvements ✅ Initial slice complete
 
 ### Goal
 
@@ -128,6 +129,14 @@ Fix confusing or slow workflows found during real phone and store testing.
 - Improved mobile spacing, button hierarchy, and empty states.
 - Clear archive, reset, and destructive-action confirmations.
 - Finalize Taglish labels and AyosTinda copy.
+
+### Initial Slice Delivered
+
+- Confirm before resetting demo data or archiving products.
+- Confirm before replacing local data with demo setup data.
+- Use mobile-friendly search, decimal, and telephone keyboards.
+- Explain Face Value, Wallet Deduction, and Customer Pays in the Load/Bills Payment form.
+- Label Load product, Mobile Number, Biller, and Account Reference fields clearly.
 
 ## Phase 16 — Data Safety and Privacy
 

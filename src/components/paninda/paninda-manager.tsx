@@ -164,6 +164,7 @@ export function PanindaManager() {
 
   async function archiveProduct(product: Product) {
     if (!store) return;
+    if (!window.confirm(`Archive ${product.name}? It will no longer appear in Benta.`)) return;
 
     setIsSaving(true);
     setStatus(`Archiving ${product.name}...`);

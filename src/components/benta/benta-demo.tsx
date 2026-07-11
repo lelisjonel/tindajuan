@@ -182,6 +182,7 @@ export function BentaDemo() {
   }
 
   async function resetDemo() {
+    if (!window.confirm("Reset demo data? This will replace the current local store data.")) return;
     setIsSaving(true);
     setStatus("Resetting demo data...");
     await resetLocalData(db);
@@ -236,6 +237,7 @@ export function BentaDemo() {
               className="tj-input mt-2"
               id="benta-product-search"
               onChange={(event) => setProductSearch(event.target.value)}
+              inputMode="search"
               placeholder="Search product"
               value={productSearch}
             />
