@@ -54,19 +54,20 @@ Last verified after the Phase 14 backup and recovery implementation:
 | Phase 14 — Backup and Recovery | ✅ Complete | Full JSON backup export/restore, validation, destructive-action confirmation, and local-data warnings implemented and manually tested successfully. |
 | Phase 15 — Usability Improvements | ✅ Complete | Destructive-action confirmations, mobile input modes, clearer Load/Bills Payment pricing guidance, and labeled service fields implemented and tested successfully. |
 | Phase 16 — Data Safety and Privacy | ✅ Complete | Local-first storage, offline limitations, privacy guidance for customer/service data, and recoverable storage/database error messages implemented and verified. |
+| Phase 17 — Pilot Store Testing | 🟡 In progress | Pilot checklist and feedback pack prepared; controlled store sessions and additional tester feedback are pending. |
 
 ### Current Position
 
-The app is feature-complete through **Phase 14 implementation**. The current working brand is **AyosTinda**, with the product positioned as a simple WebPOS for sari-sari stores:
+The app is feature-complete through **Phase 16 implementation**. The current working brand is **AyosTinda**, with the product positioned as a simple WebPOS for sari-sari stores:
 
 > Benta, paninda, utang, at kaha. Mas ayos sa isang lugar.
 
-Phases 13–16 are complete. The next phase is Pilot Store Testing, focused on controlled daily use with one to three additional store users.
+Phases 13–16 are complete. Phase 17 is now in progress with a controlled pilot checklist, reconciliation measures, backup routine, and issue log ready for one to three additional store users.
 
 Automated verification currently passes:
 
 ```txt
-npm test       ✅ 28 tests passed
+npm test       ✅ 31 tests passed
 npm run lint   ✅ passed
 npm run build  ✅ passed
 ```
@@ -182,6 +183,10 @@ Run AyosTinda in a controlled real-store pilot before public release.
 - Recording a transaction is faster or clearer than the paper notebook.
 - No data-loss incidents occur during the pilot.
 - Feedback from one to three additional store users is collected and reviewed.
+
+### Pilot Pack
+
+- `phase-17-pilot-store-test.md` contains the setup checklist, daily workflow, success measures, issue log, severity guide, and sign-off form.
 
 ## Phase 18 — MVP Release / v1.0
 

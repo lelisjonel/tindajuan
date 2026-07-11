@@ -81,6 +81,7 @@ Add Supabase only after local flow is usable.
 - [`database-schema.md`](./database-schema.md) — local and future cloud data model
 - [`offline-first.md`](./offline-first.md) — local-first and sync strategy
 - [`implementation-guide.md`](./implementation-guide.md) — development setup, folder structure, and implementation order
+- [`phase-17-pilot-store-test.md`](./phase-17-pilot-store-test.md) — controlled pilot checklist, reconciliation measures, and feedback log
 
 ## Core Product Rules
 
